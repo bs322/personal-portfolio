@@ -3,7 +3,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const elements = document.querySelectorAll(".animate");
 
-    function revealOnScroll() {
+    function revealOnScroll() 
+    // Active Navbar on Scroll
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+        }
+    });
+});
+    {
         const trigger = window.innerHeight * 0.85;
 
         elements.forEach(el => {
