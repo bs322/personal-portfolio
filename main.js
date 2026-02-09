@@ -65,11 +65,7 @@ window.addEventListener("scroll", () => {
             }
         });
     }
-
-});
-
 // ===== Typing Effect =====
-
 const textArray = ["Web Developer", "Frontend Developer", "Python Learner"];
 let index = 0;
 let charIndex = 0;
@@ -99,9 +95,9 @@ function eraseEffect() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    typeEffect();
+typeEffect();
 });
+
 //theme toggle
 const toggleBtn = document.getElementById("themeToggle");
 
