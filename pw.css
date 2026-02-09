@@ -26,7 +26,7 @@ body{
 }
 
 .logo{
-    font: size 26px;
+    font-size: 26px;
     font-weight:700;
     color:#00f7ff;
     text-decoration:none;
@@ -114,7 +114,7 @@ body{
 .about-img img{
     width:100%;
     max-width: 600px;
-    border: radius 50px;
+    border-radius: 50px;
     box-shadow: 0 0 20px #00f7ff;;
 }
 
@@ -381,12 +381,14 @@ footer{
 .hero {
     height: 100vh;
     display: flex;
+    justify-content:center;
     align-items: center;
     text-align:center;
     padding: 0 20%;
 }
-.hero=content{
+.hero-content{
     max-width:700px:
+    margin:auto;
 }
 .hero-content h1 {
     font-size: 45px;
