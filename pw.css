@@ -1,0 +1,378 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:#ffffff;
+}
+
+/* HEADER */
+.header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font: size 26px;
+    font-weight:700;
+    color:#00f7ff;
+    text-decoration:none;
+}
+
+.navbar a{
+    margin-left:30px;
+    font-size:18px;
+    color:#ffffff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#00f7ff;
+}
+
+/* HOME */
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 10%;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+.home-content{
+    width: 50%;
+}
+
+.home-img{
+    width: 50%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.home-content h1{
+    font-size:55px;
+    color:#00f7ff;
+}
+
+.home-content h3{
+    font-size:26px;
+}
+
+.home-content p{
+    margin:20px 0;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.home-img img{
+    width:380px;
+    max-width: 100%;
+    border-radius:50%;
+    box-shadow:0 0 25px #00f7ff;
+}
+
+/* BUTTON */
+.btn-box{
+    display:inline-block;
+    padding:12px 28px;
+    background:#00f7ff;
+    color:#000;
+    border-radius:25px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn-box:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #00f7ff;
+}
+
+/* ABOUT */
+.about{
+    display:flex;
+    justify-content: space-between;
+    gap:50px;
+    padding:50px 10%;
+    align-items:center;
+}
+
+.about-img img{
+    width:100%;
+    max-width: 600px;
+    border: radius 50px;
+    box-shadow: 0 0 20px #00f7ff;;
+}
+
+.about-text h2{
+    font-size:36px;
+}
+
+.about-text h2 span{
+    color:#00f7ff;
+}
+
+.about-text p{
+    margin:20px 0;
+    line-height:1.6;
+}
+
+/* PROJECTS */
+.services{
+    padding:100px 10%;
+}
+
+.sub-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+.sub-title span{
+    color:#00f7ff;
+}
+
+.services-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.4s ease;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,247,255,0.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:linear-gradient(135deg,#00f7ff,#00c3ff);
+    box-shadow:
+        0 0 30px #00f7ff,
+        0 0 60px #00f7ff;
+    color:#000;
+}
+.icon-box{
+    width:100px;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 15px;
+}
+
+.service-img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+}
+
+
+
+.service-img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+    margin-bottom: 15px;
+}
+.card:first-child .service-img{
+    width:80px;
+    height:80px;
+}
+
+
+/* SKILLS */
+.container1{
+    padding:100px 15%;
+}
+
+.Technical-bars .bar{
+    margin:30px 0;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-size:16px;
+    font-weight:500;
+}
+
+.progress-line{
+    height:10px;
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.progress-line span{
+    position:absolute;
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(90deg,#00f7ff,#00c3ff);
+    box-shadow:0 0 15px #00f7ff;
+}
+.progress-line span{
+    width:0;
+    animation:fillBar 2s ease forwards;
+}
+
+@keyframes fillBar{
+    to{
+        width:var(--width);
+    }
+}
+
+
+
+.progress-line.html span{ --width:90%;}
+.progress-line.css span{ --width:75%;}
+.progress-line.javascript span{ --width:70%;}
+.progress-line.python span{ --width:65%;}
+
+/* CONTACT */
+.contact{
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    gap:50px;
+    padding:60px 10%;
+
+}
+.contact-form{
+    flex: 1;
+}
+.contact-left{
+    flex: 1;
+    
+}
+.contact-left img{
+    width:550px;
+    max-width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:20px;
+    border:none;
+}
+
+.contact-form .btn-box{
+    width:100%;
+    text-align:center;
+}
+.glow-box{
+    padding:20px;
+    border-radius:20px;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    box-shadow: 
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 20px #00f7ff;
+}
+.contact-text h2{
+    font-size:40px;
+    font-weight:700;
+    color:#dd1111;
+    text-shadow:
+        0 0 5px #00fff2,
+        0 0 1px #00f7ff,
+        0 0 5px #00f7ff;
+}
+.glow-img{
+    border-radius:20px;
+    box-shadow:
+        0 0 15px #00f7ff,
+        0 0 30px #00f7ff;
+    transition:0.4s ease;
+}
+
+.glow-img:hover{
+    box-shadow:
+        0 0 25px #00f7ff,
+        0 0 50px #00f7ff,
+        0 0 80px #00f7ff;
+    transform:scale(1.05);
+}
+.glow-img{
+    border-radius:20px;
+    animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse{
+    from{
+        box-shadow:0 0 10px #00f7ff;
+    }
+    to{
+        box-shadow:0 0 35px #00f7ff;
+    }
+}
+
+
+
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#00f7ff;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+     .home{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .home-img{
+        justify-content: center;
+        margin-top:30px;
+    }
+     .contact{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .contact-left{
+        margin-bottom:20px;
+    }
+
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+
+
+/* Hide toggle content */
+.hidden{
+    display:none;
+}
