@@ -1,73 +1,6 @@
-// Scroll Reveal
 document.addEventListener("DOMContentLoaded", function () {
 
-    const elements = document.querySelectorAll(".animate");
-
-    function revealOnScroll() 
-    // Active Navbar on Scroll
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".navbar a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.offsetHeight;
-
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-        }
-    });
-});
-    {
-        const trigger = window.innerHeight * 0.85;
-
-        elements.forEach(el => {
-            const top = el.getBoundingClientRect().top;
-
-            if (top < trigger) {
-                el.classList.add("show");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-    
-    window.addEventListener("scroll", function() {
-    const header = document.querySelector(".header");
-    if(header){
-        header.classList.toggle("sticky", window.scrollY > 50);
-    }
-});
-
-
-    // More About Toggle
-    const btn = document.getElementById("moreBtn");
-    const content = document.getElementById("moreContent");
-
-    if (btn && content) {
-        btn.addEventListener("click", function () {
-            content.classList.toggle("hidden");
-
-            if (content.classList.contains("hidden")) {
-                btn.innerText = "More About Me";
-            } else {
-                btn.innerText = "Hide About Me";
-            }
-        });
-    }
-// ===== Typing Effect =====
-document.addEventListener("DOMContentLoaded", function () {
-
+    // ===== Typing Effect =====
     const textArray = ["Web Developer", "Frontend Developer", "Python Learner"];
     let index = 0;
     let charIndex = 0;
@@ -95,28 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    typeEffect();
+    if (typingElement) {
+        typeEffect();
+    }
 
+    // ===== Theme Toggle =====
+    const toggleBtn = document.getElementById("themeToggle");
 
-//theme toggle
-const toggleBtn = document.getElementById("themeToggle");
+    if(toggleBtn){
+        toggleBtn.addEventListener("click", function(){
+            document.body.classList.toggle("light-mode");
 
-if(toggleBtn){
-    toggleBtn.addEventListener("click", function(){
-        document.body.classList.toggle("light-mode");
+            if(document.body.classList.contains("light-mode")){
+                toggleBtn.innerText = "☀️";
+            } else {
+                toggleBtn.innerText = "🌙";
+            }
+        });
+    }
 
-        if(document.body.classList.contains("light-mode")){
-            toggleBtn.innerText = "☀️";
-        } else {
-            toggleBtn.innerText = "🌙";
-        }
+    // ===== Scroll Progress Bar =====
+    window.addEventListener("scroll", function(){
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.getElementById("progressBar").style.width = scrollPercent + "%";
     });
-}
-// Scroll Progress Bar
-window.addEventListener("scroll", function(){
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
 
-    document.getElementById("progressBar").style.width = scrollPercent + "%";
 });
