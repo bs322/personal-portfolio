@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
+    
+    window.addEventListener("scroll", function() {
+    const header = document.querySelector(".header");
+    if(header){
+        header.classList.toggle("sticky", window.scrollY > 50);
+    }
+});
 
 
     // More About Toggle
