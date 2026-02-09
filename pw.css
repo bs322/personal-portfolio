@@ -469,3 +469,14 @@ body.light-mode .card{
     background:#f0f0f0;
     color:#000;
 }
+/* Fix name color in light mode */
+body.light-mode .home-content h1{
+    color:#000000;
+}
+
+body.light-mode .logo{
+    color:#000000;
+}
+body.light-mode .hero-content h1{
+    color:#000000;
+}
