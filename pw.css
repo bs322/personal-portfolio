@@ -480,3 +480,6 @@ body.light-mode .logo{
 body.light-mode .hero-content h1{
     color:#000000;
 }
+html{
+    scroll-behavior: smooth;
+}
