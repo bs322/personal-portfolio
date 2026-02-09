@@ -113,3 +113,11 @@ if(toggleBtn){
         }
     });
 }
+// Scroll Progress Bar
+window.addEventListener("scroll", function(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    document.getElementById("progressBar").style.width = scrollPercent + "%";
+});
