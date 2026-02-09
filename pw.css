@@ -425,3 +425,26 @@ footer{
     color: #00f7ff;
     font-weight: bold;
 }
+.theme-btn{
+    background:#00f7ff;
+    border:none;
+    padding:8px 12px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:16px;
+    margin-left:20px;
+}
+
+.light-mode{
+    background:#ffffff;
+    color:#000000;
+}
+
+.light-mode .header{
+    background:#ffffff;
+}
+
+.light-mode .card{
+    background:#f2f2f2;
+    color:#000;
+}
