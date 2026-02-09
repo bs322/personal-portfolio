@@ -487,3 +487,13 @@ html{
     color:#00f7ff;
     font-weight:600;
 }
+#progressBar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:4px;
+    width:0%;
+    background:#00f7ff;
+    z-index:2000;
+    box-shadow:0 0 10px #00f7ff;
+}
