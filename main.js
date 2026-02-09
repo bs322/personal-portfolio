@@ -1,3 +1,4 @@
+console.log("JS Connected");
 document.addEventListener("DOMContentLoaded", function () {
 
     // ===== Typing Effect =====
