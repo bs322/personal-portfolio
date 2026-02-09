@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     typeEffect();
-});
+
 
 //theme toggle
 const toggleBtn = document.getElementById("themeToggle");
