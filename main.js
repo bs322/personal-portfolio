@@ -93,13 +93,16 @@ function eraseEffect() {
         charIndex--;
         setTimeout(eraseEffect, 50);
     } else {
-        index = (index + 1) % textArray.length;
+        index++;
+        if (index >= textArray.length) index = 0;
         setTimeout(typeEffect, 300);
     }
 }
 
-document.addEventListener("DOMContentLoaded", typeEffect);
-// Theme Toggle
+document.addEventListener("DOMContentLoaded", function () {
+    typeEffect();
+});
+//theme toggle
 const toggleBtn = document.getElementById("themeToggle");
 
 if(toggleBtn){
